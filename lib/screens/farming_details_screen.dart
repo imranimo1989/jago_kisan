@@ -30,7 +30,7 @@ class FarmingDetailsScreen extends StatelessWidget {
                       ),
                     ),
                     InkWell(
-                      onTap: (){
+                      onTap: () {
                         Navigator.of(context).pop();
                       },
                       splashColor: Colors.grey,
@@ -51,20 +51,19 @@ class FarmingDetailsScreen extends StatelessWidget {
                     style: TextStyle(
                       fontSize: 16,
                       fontFamily: "Poppins",
-
                       fontWeight: FontWeight.w800,
                       color: Colors.black,
                     ),
                   ),
                 ),
                 const SizedBox(height: 16),
-                FarmingDetailsTextInputField(labelText: 'Enter Your Crop Type'),
-                FarmingDetailsTextInputField(labelText: 'Enter Your Soil Type'),
-                FarmingDetailsTextInputField(labelText: 'Enter Your Climate'),
-                FarmingDetailsTextInputField(labelText: 'Farm Size and Layout'),
-                FarmingDetailsTextInputField(labelText: 'Pest and disease'),
-                FarmingDetailsTextInputField(labelText: 'Farming equipment'),
-                FarmingDetailsTextInputField(labelText: 'Economic Information'),
+                const FarmingDetailsTextInputField(labelText: 'Enter Your Crop Type'),
+                const FarmingDetailsTextInputField(labelText: 'Enter Your Soil Type'),
+                const FarmingDetailsTextInputField(labelText: 'Enter Your Climate'),
+                const FarmingDetailsTextInputField(labelText: 'Farm Size and Layout'),
+                const FarmingDetailsTextInputField(labelText: 'Pest and disease'),
+                const FarmingDetailsTextInputField(labelText: 'Farming equipment'),
+                const FarmingDetailsTextInputField(labelText: 'Economic Information'),
                 const SizedBox(height: 16),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 24),
@@ -93,7 +92,9 @@ class FarmingDetailsScreen extends StatelessWidget {
                           foregroundColor: Colors.black),
                       child: const Text(
                         "SUBMIT",
-                        style: TextStyle(fontWeight: FontWeight.bold,                      fontFamily: "Poppins",
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontFamily: "Poppins",
                         ),
                       ),
                     ),
@@ -109,9 +110,9 @@ class FarmingDetailsScreen extends StatelessWidget {
 }
 
 class FarmingDetailsTextInputField extends StatelessWidget {
-  FarmingDetailsTextInputField({super.key, required this.labelText});
+  const FarmingDetailsTextInputField({super.key, required this.labelText});
 
-  String labelText;
+  final String labelText;
 
   @override
   Widget build(BuildContext context) {
@@ -127,7 +128,7 @@ class FarmingDetailsTextInputField extends StatelessWidget {
               BoxShadow(
                 color: Colors.grey.withOpacity(0.3),
                 spreadRadius: 0,
-                blurRadius:3,
+                blurRadius: 3,
                 offset: const Offset(0, 5),
               ),
             ],
@@ -136,17 +137,17 @@ class FarmingDetailsTextInputField extends StatelessWidget {
             keyboardType: TextInputType.text,
             decoration: InputDecoration(
               labelText: labelText,
-              labelStyle: const TextStyle(color: Colors.black,fontFamily: "Poppins",),
+              labelStyle: const TextStyle(
+                color: Colors.black,
+                fontFamily: "Poppins",
+              ),
               focusedBorder: OutlineInputBorder(
-                  borderSide:
-                      const BorderSide(
-                          width: 2,
-                          color: AppColors.primaryColorDeep),
+                  borderSide: const BorderSide(
+                      width: 2, color: AppColors.primaryColorDeep),
                   borderRadius: BorderRadius.circular(30)),
               enabledBorder: OutlineInputBorder(
-                borderSide: const BorderSide(
-                    width: 2,
-                    color: AppColors.primaryColor),
+                borderSide:
+                    const BorderSide(width: 2, color: AppColors.primaryColor),
                 borderRadius: BorderRadius.circular(30),
               ),
             ),

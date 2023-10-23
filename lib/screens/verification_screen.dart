@@ -65,7 +65,7 @@ class VerificationScreen extends StatelessWidget {
               ),
               Container(
                 height: 2,
-                width: 150,
+                width: 170,
                 color: Colors.black,
               ),
               const SizedBox(

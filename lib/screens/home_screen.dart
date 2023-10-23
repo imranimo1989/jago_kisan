@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:jago_kisan/app_color.dart';
-
 import '../widget/screen_background.dart';
-import '../widget/snac_bar.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -54,6 +52,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             style: TextStyle(
                                 color: Colors.black,
                                 fontWeight: FontWeight.bold,
+                                fontFamily: "Poppins",
                                 fontSize: 18),
                           ),
                         ),
@@ -114,7 +113,7 @@ class HomeItemFarmer extends StatelessWidget {
       height: 150,
       width: 130,
       decoration: BoxDecoration(
-          border: Border.all(width: 1, style: BorderStyle.solid),
+          border: Border.all(width: 1, style: BorderStyle.solid,color: Colors.grey.shade500),
           borderRadius: BorderRadius.circular(16),
           color: Colors.grey[300]),
       child: Column(
@@ -130,45 +129,42 @@ class HomeItemFarmer extends StatelessWidget {
             style: TextStyle(
                 fontSize: 14,
                 color: Colors.black,
+                fontFamily: "Poppins",
                 fontWeight: FontWeight.bold),
           ),
-          const Align(
-            alignment: Alignment.centerLeft,
-            child: Padding(
-              padding: EdgeInsets.only(left: 4),
-              child: Expanded(
-                child: Text(
-                  "Expert In:",
-                  style: TextStyle(
-                      fontSize: 12,
-                      color: AppColors.primaryColorDeep,
-                      fontWeight: FontWeight.bold),
-                ),
-              ),
-            ),
-          ),
-           Row(
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const Expanded(
-                flex:4,
+              const Text(
+                "Expert In:",
+                style: TextStyle(
+                    fontSize: 12,
+                    fontFamily: "Poppins",
+                    color: AppColors.primaryColorDeep,
+                    fontWeight: FontWeight.bold),
+              ),
+               Row(
+                children: [
+                  const Expanded(
+                    flex:4,
 
-                child: Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 8),
-                  child: Text(
-                    " Floricultural crop "
-                    "\n production",
-                    style: TextStyle(
-                      fontSize: 10,
-                      color: Colors.black,
+                    child: Text(
+                      " Floricultural crop "
+                      "\n production",
+                      style: TextStyle(
+                        fontFamily: "Poppins",
+                        fontSize: 10,
+                        color: Colors.black,
+                      ),
                     ),
                   ),
-                ),
-              ),
-              Expanded(
-                  flex: 1,
-                  child: InkWell(onTap:(){},
-                  child:  const Icon(Icons.arrow_drop_down,color: AppColors.primaryColorDeep,size: 36,)),),
+                  Expanded(
+                      flex: 1,
+                      child: InkWell(onTap:(){},
+                      child:  const Icon(Icons.arrow_drop_down,color: AppColors.primaryColorDeep,size: 36,)),),
 
+                ],
+              ),
             ],
           ),
 
