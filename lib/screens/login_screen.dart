@@ -90,7 +90,9 @@ class LoginScreen extends StatelessWidget {
                             const Text(
                               "Or Sign In Using",
                               style: TextStyle(
-                                  fontFamily: "Poppins", color: Colors.white),
+                                fontFamily: "Poppins",
+                                color: Colors.white,
+                              ),
                             ),
                             const SizedBox(height: 8),
                             Row(
@@ -120,7 +122,7 @@ class LoginScreen extends StatelessWidget {
                   width: 250,
                   child: ElevatedButton(
                       onPressed: () {
-                        Navigator.of(context).push(
+                        Navigator.of(context).pushReplacement(
                           CustomPageRoute(
                             builder: (context) => const CreateAccountScreen(),
                           ),
@@ -131,11 +133,12 @@ class LoginScreen extends StatelessWidget {
                       child: const Text(
                         "Login",
                         style: TextStyle(
-                            fontFamily: "Poppins",
-                            color: Colors.black,
-                            fontSize: 24,
-                            fontWeight: FontWeight.bold),
-                      )),
+                          fontFamily: "Poppins",
+                          color: Colors.black,
+                          fontSize: 24,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),),
                 ),
                 const SizedBox(
                   height: 16,

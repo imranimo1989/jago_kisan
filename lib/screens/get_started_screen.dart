@@ -59,7 +59,7 @@ class GetStartedScreen extends StatelessWidget {
                 ),
                 InkWell(
                   onTap: () {
-                    Navigator.of(context).push(
+                    Navigator.of(context).pushReplacement(
                       CustomPageRoute(
                         builder: (context) => const LoginScreen(),
                       ),

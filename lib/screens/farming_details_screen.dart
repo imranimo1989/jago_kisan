@@ -29,12 +29,12 @@ class FarmingDetailsScreen extends StatelessWidget {
                         fit: BoxFit.contain,
                       ),
                     ),
-                    Center(
-                      child: InkWell(
-                        onTap: (){
-                          Navigator.of(context).pop();
-                        },
-                        splashColor: Colors.grey,
+                    InkWell(
+                      onTap: (){
+                        Navigator.of(context).pop();
+                      },
+                      splashColor: Colors.grey,
+                      child: Center(
                         child: Image.asset(
                           "assets/images/logo.png",
                           height: 100,
@@ -50,6 +50,8 @@ class FarmingDetailsScreen extends StatelessWidget {
                     "Farming Details",
                     style: TextStyle(
                       fontSize: 16,
+                      fontFamily: "Poppins",
+
                       fontWeight: FontWeight.w800,
                       color: Colors.black,
                     ),
@@ -91,7 +93,8 @@ class FarmingDetailsScreen extends StatelessWidget {
                           foregroundColor: Colors.black),
                       child: const Text(
                         "SUBMIT",
-                        style: TextStyle(fontWeight: FontWeight.bold),
+                        style: TextStyle(fontWeight: FontWeight.bold,                      fontFamily: "Poppins",
+                        ),
                       ),
                     ),
                   ),
@@ -122,9 +125,9 @@ class FarmingDetailsTextInputField extends StatelessWidget {
             borderRadius: BorderRadius.circular(30),
             boxShadow: [
               BoxShadow(
-                color: Colors.grey.withOpacity(0.5),
-                spreadRadius: 1,
-                blurRadius: 5,
+                color: Colors.grey.withOpacity(0.3),
+                spreadRadius: 0,
+                blurRadius:3,
                 offset: const Offset(0, 5),
               ),
             ],
@@ -133,13 +136,17 @@ class FarmingDetailsTextInputField extends StatelessWidget {
             keyboardType: TextInputType.text,
             decoration: InputDecoration(
               labelText: labelText,
-              labelStyle: const TextStyle(color: Colors.black),
+              labelStyle: const TextStyle(color: Colors.black,fontFamily: "Poppins",),
               focusedBorder: OutlineInputBorder(
                   borderSide:
-                      const BorderSide(color: AppColors.primaryColorDeep),
+                      const BorderSide(
+                          width: 2,
+                          color: AppColors.primaryColorDeep),
                   borderRadius: BorderRadius.circular(30)),
               enabledBorder: OutlineInputBorder(
-                borderSide: const BorderSide(color: AppColors.primaryColor),
+                borderSide: const BorderSide(
+                    width: 2,
+                    color: AppColors.primaryColor),
                 borderRadius: BorderRadius.circular(30),
               ),
             ),

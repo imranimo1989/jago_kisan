@@ -21,6 +21,8 @@ class CreateAccountScreen extends StatelessWidget {
                   const Text(
                     "Create Account",
                     style: TextStyle(
+                        fontFamily: "Poppins",
+
                         fontSize: 25,
                         fontWeight: FontWeight.w800,
                         color: Colors.black),
@@ -116,6 +118,8 @@ class CustomAppButton extends StatelessWidget {
               child: Text(
             buttonText,
             style: const TextStyle(
+                fontFamily: "Poppins",
+
                 fontWeight: FontWeight.w800, fontSize: 24, color: Colors.black),
           )),
         ),

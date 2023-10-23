@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:jago_kisan/app_color.dart';
-import 'package:jago_kisan/bottom_nav_bar.dart';
 import 'package:jago_kisan/screens/farming_details_screen.dart';
 import 'package:jago_kisan/widget/screen_background.dart';
+import 'package:jago_kisan/widget/snac_bar.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 
 import '../custom_method/page_route_builder.dart';
@@ -34,6 +34,7 @@ class VerificationScreen extends StatelessWidget {
                       child: Image.asset(
                         "assets/icon/back.png",
                         height: 30,
+                        width: 30,
                         fit: BoxFit.contain,
                       ),
                     ),
@@ -56,6 +57,7 @@ class VerificationScreen extends StatelessWidget {
                   "Verify Phone",
                   style: TextStyle(
                     fontSize: 24,
+                    fontFamily: "Poppins",
                     fontWeight: FontWeight.w800,
                     color: Colors.black,
                   ),
@@ -71,7 +73,10 @@ class VerificationScreen extends StatelessWidget {
               ),
               const Text(
                 "Code sent to 016120723297",
-                style: TextStyle(fontWeight: FontWeight.bold),
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontFamily: "Poppins",
+                ),
               ),
               const SizedBox(
                 height: 16,
@@ -90,7 +95,7 @@ class VerificationScreen extends StatelessWidget {
                   inactiveFillColor: Colors.white,
                   inactiveColor: Colors.black38,
                   shape: PinCodeFieldShape.box,
-                  borderRadius: BorderRadius.circular(16),
+                  borderRadius: BorderRadius.circular(12),
                   fieldHeight: 50,
                   fieldWidth: 50,
                   activeFillColor: Colors.white,
@@ -109,21 +114,29 @@ class VerificationScreen extends StatelessWidget {
                 children: [
                   const Text("Don't receive code?"),
                   TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      showSnackMessage(context,"Not Functional yet, please wait for next version");
+                    },
                     child: const Text(
                       "Request Again",
                       style: TextStyle(
-                          fontWeight: FontWeight.w800, color: Colors.black),
+                          fontFamily: "Poppins",
+                          fontWeight: FontWeight.w800,
+                          color: Colors.black),
                     ),
                   ),
                 ],
               ),
               TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  showSnackMessage(context,"Not Functional yet, please wait for next version");
+                },
                 child: const Text(
                   "Get Via Call",
                   style: TextStyle(
-                      fontWeight: FontWeight.w800, color: Colors.black),
+                      fontFamily: "Poppins",
+                      fontWeight: FontWeight.w800,
+                      color: Colors.black),
                 ),
               ),
               SizedBox(
@@ -141,7 +154,9 @@ class VerificationScreen extends StatelessWidget {
                     child: const Text(
                       "Verify",
                       style: TextStyle(
-                          fontWeight: FontWeight.w800, color: Colors.black),
+                          fontFamily: "Poppins",
+                          fontWeight: FontWeight.w800,
+                          color: Colors.black),
                     ),
                   ))
             ],

@@ -86,7 +86,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   return InkWell(
                     splashColor: Colors.grey,
                     onTap: (){
-                      showSnackBar( context, "Not Functional yet, please wait for next version");
+
 
                     },
 
