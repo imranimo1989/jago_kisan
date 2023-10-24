@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:jago_kisan/app_color.dart';
 import 'package:jago_kisan/screens/create_account_screen.dart';
+import 'package:jago_kisan/widget/language_selector.dart';
 import 'package:jago_kisan/widget/screen_background.dart';
 
 import '../custom_method/page_route_builder.dart';
@@ -146,7 +147,13 @@ class LoginScreen extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.only(left: 40),
                   child: InkWell(
-                    onTap: () {},
+                    onTap: () {
+                      showDialog(
+                        context: context,
+                        builder: (BuildContext context) {
+                          return LanguageSelectionPopup();
+                        },
+                      );                    },
                     child: Container(
                       height: 30,
                       decoration: const BoxDecoration(
@@ -178,10 +185,10 @@ class LoginTextField extends StatelessWidget {
     required this.obscureText,
   });
 
-  String labelText;
-  IconData icon;
-  TextEditingController controller;
-  bool obscureText;
+  final String labelText;
+ final IconData icon;
+ final TextEditingController controller;
+  final bool obscureText;
 
   @override
   Widget build(BuildContext context) {

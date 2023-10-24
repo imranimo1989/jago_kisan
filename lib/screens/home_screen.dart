@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:jago_kisan/app_color.dart';
+import 'package:jago_kisan/widget/country_dropdown.dart';
 import '../widget/screen_background.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -27,43 +28,40 @@ class _HomeScreenState extends State<HomeScreen> {
                   fit: BoxFit.fitHeight,
                 ),
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  Image.asset(
-                    "assets/icon/back.png",
-                    height: 30,
-                    fit: BoxFit.contain,
-                  ),
-                  Container(
-                    height: 48,
-                    width: 300,
-                    decoration: BoxDecoration(
-                      color: AppColors.primaryColor,
-                      borderRadius: BorderRadius.circular(30),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 24),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Image.asset(
+                      "assets/icon/back.png",
+                      height: 30,
+                      fit: BoxFit.contain,
                     ),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        const Padding(
-                          padding: EdgeInsets.only(left: 16),
-                          child: Text(
-                            "Select State/Country",
-                            style: TextStyle(
-                                color: Colors.black,
-                                fontWeight: FontWeight.bold,
-                                fontFamily: "Poppins",
-                                fontSize: 18),
+                    Container(
+                      height: 48,
+                      width: 250,
+                      decoration: BoxDecoration(
+                        color: AppColors.primaryColor,
+                        borderRadius: BorderRadius.circular(30),
+                      ),
+                      child:
+                          const Padding(
+                            padding: EdgeInsets.only(left: 16),
+                             child: CountryDropdown(),
+                             //Text(
+                            //   "Select State/Country",
+                            //   style: TextStyle(
+                            //       color: Colors.black,
+                            //       fontWeight: FontWeight.bold,
+                            //       fontFamily: "Poppins",
+                            //       fontSize: 18),
+                            // ),
                           ),
-                        ),
-                        IconButton(
-                          onPressed: () {},
-                          icon: const Icon(Icons.arrow_drop_down),
-                        )
-                      ],
+
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
               const SizedBox(height: 16),
 
