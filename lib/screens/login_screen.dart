@@ -177,7 +177,7 @@ class LoginScreen extends StatelessWidget {
 }
 
 class LoginTextField extends StatelessWidget {
-  LoginTextField({
+  const LoginTextField({
     super.key,
     required this.controller,
     required this.labelText,
