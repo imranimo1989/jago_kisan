@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:jago_kisan/app_color.dart';
-import 'package:jago_kisan/screens/expert_in_details_screen.dart';
-import '../custom_method/page_route_builder.dart';
 import '../widget/screen_background.dart';
+import '../widget/snac_bar.dart';
 
 class FarmerDirectoryScreen extends StatefulWidget {
   const FarmerDirectoryScreen({super.key});
@@ -31,8 +30,8 @@ class _FarmerDirectoryScreenState extends State<FarmerDirectoryScreen> {
                   ),
                 ),
                 InkWell(
-                  onTap: (){
-                    Navigator.of(context).pop();
+                  onTap: () {
+                    showSnackMessage(context,"Not Functional yet, please wait for next version");
                   },
                   child: Image.asset(
                     "assets/icon/back.png",
@@ -48,7 +47,7 @@ class _FarmerDirectoryScreenState extends State<FarmerDirectoryScreen> {
                 const SizedBox(
                   height: 16,
                 ),
-                SearchField(
+                const SearchField(
                   labelText: 'Search',
                 ),
                 const SizedBox(
@@ -65,33 +64,24 @@ class _FarmerDirectoryScreenState extends State<FarmerDirectoryScreen> {
                   expertIn: " Vegetables Disease Management",
                   imageSource: "assets/images/profilephoto1.png",
                   onTap: () {
-                    Navigator.of(context).push(
-                      CustomPageRoute(
-                        builder: (context) => const ExpertInDetailsScreen(),
-                      ),
-                    );
+                    showSnackMessage(context,
+                        "Not Functional yet, please wait for next version");
                   },
                 ),
                 VegetableCropsExpert(
                   expertIn: " Leafy Vegetables",
                   imageSource: "assets/images/profilephoto2.png",
                   onTap: () {
-                    Navigator.of(context).push(
-                      CustomPageRoute(
-                        builder: (context) => const ExpertInDetailsScreen(),
-                      ),
-                    );
+                    showSnackMessage(context,
+                        "Not Functional yet, please wait for next version");
                   },
                 ),
                 VegetableCropsExpert(
                   expertIn: " Pesticide use in fruits and vegetables",
                   imageSource: "assets/images/profilephoto3.png",
                   onTap: () {
-                    Navigator.of(context).push(
-                      CustomPageRoute(
-                        builder: (context) => const ExpertInDetailsScreen(),
-                      ),
-                    );
+                    showSnackMessage(context,
+                        "Not Functional yet, please wait for next version");
                   },
                 ),
               ],
@@ -104,12 +94,15 @@ class _FarmerDirectoryScreenState extends State<FarmerDirectoryScreen> {
 }
 
 class VegetableCropsExpert extends StatelessWidget {
-  VegetableCropsExpert(
-      {super.key, required this.imageSource, required this.expertIn, required this.onTap});
+  const VegetableCropsExpert(
+      {super.key,
+      required this.imageSource,
+      required this.expertIn,
+      required this.onTap});
 
-  String imageSource;
-  String expertIn;
-  VoidCallback onTap;
+ final String imageSource;
+  final String expertIn;
+ final  VoidCallback onTap;
 
   @override
   Widget build(BuildContext context) {
@@ -169,9 +162,9 @@ class VegetableCropsExpert extends StatelessWidget {
 }
 
 class SearchField extends StatelessWidget {
-  SearchField({super.key, required this.labelText});
+  const SearchField({super.key, required this.labelText});
 
-  String labelText;
+  final String labelText;
 
   @override
   Widget build(BuildContext context) {

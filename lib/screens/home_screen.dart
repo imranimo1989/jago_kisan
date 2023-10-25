@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:jago_kisan/app_color.dart';
 import '../widget/screen_background.dart';
+import '../widget/snac_bar.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -30,10 +31,17 @@ class _HomeScreenState extends State<HomeScreen> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  Image.asset(
-                    "assets/icon/back.png",
-                    height: 30,
-                    fit: BoxFit.contain,
+                  InkWell(
+                    onTap: (){
+                      showSnackMessage(context,"Not Functional yet, please wait for next version"
+                      );
+                      print("Back");
+                    },
+                    child: Image.asset(
+                      "assets/icon/back.png",
+                      height: 30,
+                      fit: BoxFit.contain,
+                    ),
                   ),
                   Container(
                     height: 48,
@@ -57,7 +65,10 @@ class _HomeScreenState extends State<HomeScreen> {
                           ),
                         ),
                         IconButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            showSnackMessage(context,"Not Functional yet, please wait for next version");
+                            print("Icon");
+                          },
                           icon: const Icon(Icons.arrow_drop_down),
                         )
                       ],
@@ -75,7 +86,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   crossAxisCount: 2,
                   childAspectRatio:5.0,
                   crossAxisSpacing: 16,
-                  mainAxisExtent: 155,
+                  mainAxisExtent: 170,
                   mainAxisSpacing: 16,
                   // Number of columns
 
@@ -86,7 +97,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     splashColor: Colors.grey,
                     onTap: (){
 
-
+                      showSnackMessage(context,"Not Functional yet, please wait for next version");
                     },
 
                       child: const HomeItemFarmer());
@@ -132,40 +143,43 @@ class HomeItemFarmer extends StatelessWidget {
                 fontFamily: "Poppins",
                 fontWeight: FontWeight.bold),
           ),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              const Text(
-                "Expert In:",
-                style: TextStyle(
-                    fontSize: 12,
-                    fontFamily: "Poppins",
-                    color: AppColors.primaryColorDeep,
-                    fontWeight: FontWeight.bold),
-              ),
-               Row(
-                children: [
-                  const Expanded(
-                    flex:4,
+          SizedBox(
+            width: 160,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const Text(
+                  "Expert In:",
+                  style: TextStyle(
+                      fontSize: 12,
+                      fontFamily: "Poppins",
+                      color: AppColors.primaryColorDeep,
+                      fontWeight: FontWeight.bold),
+                ),
+                 Row(
+                  children: [
+                    const Expanded(
+                      flex:4,
 
-                    child: Text(
-                      " Floricultural crop "
-                      "\n production",
-                      style: TextStyle(
-                        fontFamily: "Poppins",
-                        fontSize: 10,
-                        color: Colors.black,
+                      child: Text(
+                        " Floricultural crop "
+                        "\n production",
+                        style: TextStyle(
+                          fontFamily: "Poppins",
+                          fontSize: 10,
+                          color: Colors.black,
+                        ),
                       ),
                     ),
-                  ),
-                  Expanded(
-                      flex: 1,
-                      child: InkWell(onTap:(){},
-                      child:  const Icon(Icons.arrow_drop_down,color: AppColors.primaryColorDeep,size: 36,)),),
+                    Expanded(
+                        flex: 1,
+                        child: InkWell(onTap:(){},
+                        child:  const Icon(Icons.arrow_drop_down,color: AppColors.primaryColorDeep,size: 36,)),),
 
-                ],
-              ),
-            ],
+                  ],
+                ),
+              ],
+            ),
           ),
 
         ],

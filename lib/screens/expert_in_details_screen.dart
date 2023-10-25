@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:jago_kisan/app_color.dart';
 
 import '../widget/screen_background.dart';
+import '../widget/snac_bar.dart';
 
 class ExpertInDetailsScreen extends StatefulWidget {
   const ExpertInDetailsScreen({super.key});
@@ -21,12 +21,17 @@ class _ExpertInDetailsScreenState extends State<ExpertInDetailsScreen> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Center(
-                  child: Image.asset(
-                    "assets/images/logo.png",
-                    height: 100,
-                    width: 100,
-                    fit: BoxFit.fitHeight,
+                InkWell(
+                  onTap: (){
+                    showSnackMessage(context,"Not Functional yet, please wait for next version");
+                  },
+                  child: Center(
+                    child: Image.asset(
+                      "assets/images/logo.png",
+                      height: 100,
+                      width: 100,
+                      fit: BoxFit.fitHeight,
+                    ),
                   ),
                 ),
                 Image.asset(
@@ -35,8 +40,6 @@ class _ExpertInDetailsScreenState extends State<ExpertInDetailsScreen> {
                   fit: BoxFit.contain,
                 ),
                 const SizedBox(height: 16),
-
-
               ],
             ),
           ),
