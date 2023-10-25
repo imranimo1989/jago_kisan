@@ -59,10 +59,9 @@ class GetStartedScreen extends StatelessWidget {
                 ),
                 InkWell(
                   onTap: () {
-                    Navigator.of(context).pushReplacement(
-                      CustomPageRoute(
-                        builder: (context) => const LoginScreen(),
-                      ),
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const LoginScreen()), // Navigate to the second screen
                     );
                   },
                   child: Container(

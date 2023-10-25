@@ -144,10 +144,9 @@ class VerificationScreen extends StatelessWidget {
                     width: 300,
                     child: ElevatedButton(
                       onPressed: () {
-                        Navigator.of(context).push(
-                          CustomPageRoute(
-                            builder: (context) => const FarmingDetailsScreen(),
-                          ),
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => const FarmingDetailsScreen()), // Navigate to the second screen
                         );
                       },
                       style: ElevatedButton.styleFrom(

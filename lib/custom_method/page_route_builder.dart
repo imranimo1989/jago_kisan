@@ -21,7 +21,7 @@ class CustomPageRoute<T> extends PageRoute<T> {
   bool get maintainState => true;
 
   @override
-  Duration get transitionDuration => const Duration(milliseconds: 500);
+  Duration get transitionDuration => const Duration(milliseconds: 200);
 
   @override
   Widget buildPage(BuildContext context, Animation<double> animation, Animation<double> secondaryAnimation) {
@@ -32,7 +32,7 @@ class CustomPageRoute<T> extends PageRoute<T> {
   Widget buildTransitions(BuildContext context, Animation<double> animation, Animation<double> secondaryAnimation, Widget child) {
     const begin = Offset(1.0, 0.0);
     const end = Offset.zero;
-    var curve = Curves.easeInOut;
+    var curve = Curves.easeIn;
 
     var tween = Tween(begin: begin, end: end).chain(CurveTween(curve: curve));
     var offsetAnimation = animation.drive(tween);

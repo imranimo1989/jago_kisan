@@ -81,10 +81,9 @@ class FarmingDetailsScreen extends StatelessWidget {
                     ),
                     child: ElevatedButton(
                       onPressed: () {
-                        Navigator.of(context).push(
-                          CustomPageRoute(
-                            builder: (context) => const BottomNavBarScreen(),
-                          ),
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => const BottomNavBarScreen()), // Navigate to the second screen
                         );
                       },
                       style: ElevatedButton.styleFrom(

@@ -122,10 +122,9 @@ class LoginScreen extends StatelessWidget {
                   width: 250,
                   child: ElevatedButton(
                       onPressed: () {
-                        Navigator.of(context).pushReplacement(
-                          CustomPageRoute(
-                            builder: (context) => const CreateAccountScreen(),
-                          ),
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => const CreateAccountScreen()), // Navigate to the second screen
                         );
                       },
                       style: ElevatedButton.styleFrom(

@@ -69,10 +69,9 @@ class CreateAccountScreen extends StatelessWidget {
                   ),
                   CustomAppButton(
                     onPressed: () {
-                      Navigator.of(context).push(
-                        CustomPageRoute(
-                          builder: (context) => const VerificationScreen(),
-                        ),
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => const VerificationScreen()), // Navigate to the second screen
                       );
                     },
                     imageSource: 'assets/form_input_bg/login.png',

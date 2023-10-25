@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:jago_kisan/app_color.dart';
+import 'package:jago_kisan/screens/expert_in_details_screen.dart';
+import '../custom_method/page_route_builder.dart';
 import '../widget/screen_background.dart';
-import '../widget/snac_bar.dart';
 
 class FarmerDirectoryScreen extends StatefulWidget {
   const FarmerDirectoryScreen({super.key});
