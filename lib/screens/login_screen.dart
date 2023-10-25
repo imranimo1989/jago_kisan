@@ -4,7 +4,6 @@ import 'package:jago_kisan/screens/create_account_screen.dart';
 import 'package:jago_kisan/widget/screen_background.dart';
 
 import '../custom_method/page_route_builder.dart';
-import '../widget/snac_bar.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -147,10 +146,7 @@ class LoginScreen extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.only(left: 40),
                   child: InkWell(
-                    onTap: () {
-                      showSnackMessage(context,"Not Functional yet, please wait for next version"
-                      );
-                    },
+                    onTap: () {},
                     child: Container(
                       height: 30,
                       decoration: const BoxDecoration(
@@ -174,7 +170,7 @@ class LoginScreen extends StatelessWidget {
 }
 
 class LoginTextField extends StatelessWidget {
-  const LoginTextField({
+  LoginTextField({
     super.key,
     required this.controller,
     required this.labelText,
@@ -182,10 +178,10 @@ class LoginTextField extends StatelessWidget {
     required this.obscureText,
   });
 
-  final String labelText;
-  final IconData icon;
-  final TextEditingController controller;
-  final bool obscureText;
+  String labelText;
+  IconData icon;
+  TextEditingController controller;
+  bool obscureText;
 
   @override
   Widget build(BuildContext context) {
